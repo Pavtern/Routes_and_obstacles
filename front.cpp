@@ -19,7 +19,6 @@ coordinates from_screen(float x, float y) {
     return {lat, lon};
 }
 
-// Helper: Draw background for text
 void draw_text_background(sf::RenderWindow& window) {
     sf::RectangleShape bg(sf::Vector2f(WINDOW_SIZE, 60));
     bg.setFillColor(sf::Color::White);

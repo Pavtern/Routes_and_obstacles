@@ -43,7 +43,6 @@ vector<coordinates> generate_possible_points(int count) {
     return points;
 }
 double is_obstacle_on_line(const coordinates& start, const coordinates& end, const coordinates& obstacle) {
-    // Вычисляем расстояние от точки до линии
     double A = obstacle.latitude - start.latitude;
     double B = obstacle.longitude - start.longitude;
     double C = end.latitude - start.latitude;
