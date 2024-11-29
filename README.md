@@ -4,8 +4,10 @@ This project is a graphical route-planning application that visualizes routes be
 Features
 Interactive Point Selection:
 Select a start and end point by clicking on the screen.
+
 Dynamic Obstacle Generation:
 Randomly generate obstacles on the map that the route must avoid.
+
 Route Calculation:
 Compute an initial route with configurable intermediate steps.
 Automatically detect and validate routes for obstacle interference.
