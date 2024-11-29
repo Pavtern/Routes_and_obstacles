@@ -128,18 +128,16 @@ int main() {
 
         sf::Font font;
         if (font.loadFromFile("C:/Windows/Fonts/arial.ttf")) {
-            // Статус маршрута
             sf::Text status_text(status, font, 20);
             status_text.setFillColor(sf::Color::Black);
-            status_text.setPosition(10, WINDOW_SIZE - 50);  // Размещаем выше, чтобы не перекрывать другой текст
+            status_text.setPosition(10, WINDOW_SIZE - 50);
             window.draw(status_text);
 
-            // Информация о дистанции
             if (!route.empty()) {
                 std::string distance_info = "Total distance: " + std::to_string(total_distance) + " meters.";
                 sf::Text distance_text(distance_info, font, 20);
                 distance_text.setFillColor(sf::Color::Black);
-                distance_text.setPosition(10, WINDOW_SIZE - 30);  // Размещаем текст ниже статуса
+                distance_text.setPosition(10, WINDOW_SIZE - 30);
                 window.draw(distance_text);
             }
         }

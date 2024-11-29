@@ -154,7 +154,7 @@ bool is_route_valid(const std::vector<coordinates>& route, const std::vector<coo
     for (size_t i = 0; i < route.size() - 1; ++i) {
         for (const auto& obstacle : obstacles) {
             double distance = point_to_line_distance(route[i], route[i + 1], obstacle);
-            if (distance < 0.002) { // Радиус препятствия около 2 метров
+            if (distance < 0.002) {
                 return false;
             }
         }
@@ -172,7 +172,6 @@ std::vector<coordinates> reroute(const coordinates& start, const coordinates& en
                 double distance = is_obstacle_on_line(new_route[i], new_route[i + 1], obstacle);
 
                 if (distance < 0.002) {
-                    // Смещаем точки маршрута для обхода препятствия
                     double offset_lat = (new_route[i].latitude + new_route[i + 1].latitude) / 2 - obstacle.latitude;
                     double offset_lon = (new_route[i].longitude + new_route[i + 1].longitude) / 2 - obstacle.longitude;
 
